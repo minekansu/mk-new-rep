@@ -1,19 +1,83 @@
+<!doctype html>
+<meta charset="utf-8">
 <html>
-  <head>
-    <title> Mine Kansu </title>
-    <style>
-      body {
-        background-color: black;
-        text-align: center;
-        padding: 200px;
-      }
-      h1{
-        font-size: 60px;
-        color: #eeee33;
-      }
-    </style>
-  </head>
-  <body>
-    <h1> Mine Kansu </h1>
-  </body>
+     <head>
+        <title>Map</title>
+        <!-- <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./myhomepage.css">
+    </head>
+    <body>
+        <div class="page">
+          <h1 class="center">Mine Kansu</h1>
+          <div id="viz-container">
+              <div class="single_viz" id="map">
+                  <div class="text">
+                    Perception Map 1
+                    <p>("terrorism", "country name") /
+                       ("country name"). </p>
+                  </div>
+                  <div class="chart" id="svg_map"></div>
+              </div>
+              <div class="single_viz" id="map2">
+                  <div class="text">
+                    Perception Map 2
+                    <p>("terrorism", "country name") /
+                       ("terrorism") </p>
+                  </div>
+                  <div class="chart" id="svg_map2"></div>
+              </div>
+              <div class="single_viz" id="map3">
+                  <div class="text">
+                    Global Terrorism Database
+                    <p> Death count in terrorist attacks
+                        by country
+                        (1999-2016). </p>
+                  </div>
+                  <div class="chart" id="svg_map3"></div>
+              </div>
+
+              <div class="single_viz" id="bubble">
+                  <div class="text">
+                      In My Leisure Time
+                      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make
+                        a type specimen book. </p>
+                      <button class="button" type="button" onclick="shuffle();">Shuffle the colors</button>
+                      <br>
+                      <div class="dropdown">
+                      <button class="dropbtn">all</button>
+                      <div class="dropdown-content">
+                          <a onclick="filter('sports');">sports</a>
+                          <a onclick="filter('arts');">arts</a>
+                          <a onclick="filter('food');">food</a>
+                          <a onclick="filter('all');">all</a>
+                        </div>
+                      </div>
+                  </div>
+                  <svg class="chart" id="svg_bubble"></svg>
+              </div>
+            <hr/>
+
+
+          </div>
+        </div>
+        <!--<script src="./d3plus.v2.js"></script>-->
+        <script src="http://d3plus.org/js/d3.js"></script>
+        <script src="http://d3plus.org/js/d3plus.js"></script>
+        <script src="http://d3plus.org/js/topojson.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="http://d3js.org/queue.v1.min.js"></script>
+        <script src="http://d3js.org/topojson.v1.min.js"></script>
+        <script src="./datamaps.world.min.js"></script>
+        <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+        <script src="./map.js"></script>
+        <script src="./map2.js"></script>
+        <script src="./map3.js"></script>
+        <script src="./bubble.js"></script>
+        <script>
+
+        </script>
+    </body>
 </html>
