@@ -20,13 +20,14 @@ var tooltip = d3.select("body") //set the tooltip
     .style("font", "12px PT Sans")
     .text("tooltip");
 var habbits = [
-    {category: "sports", name: "running", alt: "helps me think:)", value: 0.3},
+    {category: "arts", name: "running", alt: "helps me think:)", value: 0.3},
     {category: "sports", name: "swimming", alt: "I enjoy the quietness in the water", value: 0.1},
     {category: "sports", name: "badminton", alt: "sweating and relaxing", value: 0.05},
     {category: "food", name: "cooking", alt: "and eating!", value: 0.2},
     {category: "arts", name: "piano", alt: "♪♫♬", value: 0.15},
     {category: "arts", name: "doodling", alt: "#$#%*&^$#@", value: 0.1},
     {category: "arts", name: "shows", alt: "watch with friends:D", value: 0.1}
+
 ];
 var node = svg.selectAll(".node")
     .data(bubble.nodes({children:habbits}).filter(function(d) { return !d.children; }))

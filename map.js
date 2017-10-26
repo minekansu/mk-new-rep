@@ -487,6 +487,7 @@ var basic_choropleth = new Datamap({
   }
 });
 var legend = d3.select("#svg_map").append("svg").attr("id", "legend");
+
 //legend.append("rect").attr("x", "200").attr("y", "10").attr("width", "20").attr("height", "20").attr("fill", "#ABDDA4");
 //legend.append("text").attr("x", "225").attr("y", "24").attr("font-size", "12px").text("");
 //legend.append("rect").attr("x", "350").attr("y", "10").attr("width", "20").attr("height", "20").attr("fill", "#AB55A4");

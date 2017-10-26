@@ -1,7 +1,7 @@
  body {
     margin: 0;
     padding: 3%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Times Narrow', sans-serif;
 }
 .page {
     margin: 0 auto;
@@ -20,19 +20,23 @@
     /*background-color: black;*/
 }
 #map{
-    height: 400px;
-}
-#bubble{
-    height: 400px;
-}
-#favorite{
     height: 500px;
 }
+#map2{
+    height: 500px;
+}
+#map3{
+    height: 500px;
+}
+#bubble{
+    height: 900px;
+}
+
 .text{
     position: relative;
     float: left;
-    width: 25%;
-    height: 100%;
+    width: 50%;
+    height: 10%;
     font-weight: bold;
     font-size: 20px;
     padding-left: 8px;
@@ -40,7 +44,7 @@
 }
 .text p{
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     text-align: justify;
     color: gray;
 }
@@ -56,30 +60,7 @@
     height: 60px;
     width: 100%;
 }
-.allFavorites {
-    position: relative;
-    float: right;
-    width: 70%;
-    height: 100%;
-    background-color: white;
-    text-align: center;
-}
-.favorites{
-    width: 50%;
-    height: 50%;
-    float: left;
-    text-align: center;
-}
-.favorites h4{
-    margin-top: 40px;
-    font-weight: bold;
-    font-size: 18px
-}
-.favorites div svg{
-    margin: 0 auto;
-    width: 50%;
-    margin-left: 70px;
-}
+
 hr{
    height: 1px;
    border: 0;
