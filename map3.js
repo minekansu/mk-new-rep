@@ -186,7 +186,9 @@ var basic_choropleth = new Datamap({
     UNK: ramp(83),
     SSD: ramp(2053),
     PSE: ramp(884),
-
+    GAB: ramp(0),
+    LTU: ramp(0),
+    PRK: ramp(0),
 
   },
   data: {
@@ -254,7 +256,7 @@ var basic_choropleth = new Datamap({
     GRC: { fillKey:	"GRC", percentage:	"76"},
     GTM: { fillKey:	"GTM", percentage:	"21"},
     GUY: { fillKey:	"GUY", percentage:	"33"},
-    HKG: { fillKey:	"HKG", percentage:	"-"},
+    HKG: { fillKey:	"HKG", percentage:	"0"},
     HND: { fillKey:	"HND", percentage:	"39"},
     HRV: { fillKey:	"HRV", percentage:	"3"},
     HTI: { fillKey:	"HTI", percentage:	"30"},
@@ -356,7 +358,10 @@ var basic_choropleth = new Datamap({
     TMP: { fillKey: "TMP", percentage: "0"},
     UNK: { fillKey: "UNK", percentage: "83"},
     SSD: { fillKey: "SSD", percentage: "2,053"},
-    PSE: { fillKey: "PSE", percentage: "884"}
+    PSE: { fillKey: "PSE", percentage: "884"},
+    GAB: { fillKey: "GAB", percentage: "0"},
+    LTU: { fillKey: "LTU", percentage: "0"},
+    PRK: { fillKey: "PRK", percentage: "0"},
 
     //zoom.bubbles([
      //{name: 'Bubble 1', latitude: 21.32, longitude: -7.32, radius: 45, fillKey: 'gt500'},
