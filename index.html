@@ -6,56 +6,68 @@
         <!-- <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"> -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="./index.css">
+
     </head>
     <body>
         <div class="page">
-          <h1 class="center">Mine Kansu - Guided Project</h1>
+          <h1 class="center">Media Coverage of Terrorism by Country</h1>
+          <p class="center">Data from the Guardian Open Platform on word count of country names and
+            the word "terrorism" in articles published since 1999 provide insights into how countries
+            are portrayed in the media, which influences public perception.</p>
           <div id="viz-container">
-              <div class="single_viz" id="map">
-                  <div class="text">
-                    Perception Map 1
-                    <p>("terrorism", "country name") /
-                       ("country name"). </p>
-                  </div>
-                  <div class="chart" id="svg_map"></div>
-              </div>
+
               <div class="single_viz" id="map2">
                   <div class="text">
-                    Perception Map 2
-                    <p>("terrorism", "country name") /
-                       ("terrorism") </p>
+                    Which countries get mentioned the most on terrorism news coverage?
+                    <p> The map shows mention rate per country in all articles that contain the word "terrorism" </p>
                   </div>
                   <div class="chart" id="svg_map2"></div>
+
               </div>
+              &nbsp;&nbsp;
+              <div class="single_viz" id="map">
+                  <div class="text">
+                    Which countries get the most coverage on the subject of terrorism?
+                    <p> The map shows mention rate of a country alongside the word "terrorism" in the Guardian articles </p>
+                  </div>
+                  <div class="chart" id="svg_map"></div>
+
+              </div>
+               &nbsp;&nbsp;
               <div class="single_viz" id="map3">
                   <div class="text">
-                    Global Terrorism Database
+                    Geography of Terrorism: Casualties
                     <p> Death count in terrorist attacks
                         by country
                         (1999-2016). </p>
                   </div>
                   <div class="chart" id="svg_map3"></div>
+                  <div class="text2">
+                    <p> Source: Global Terrorism Database </p>
+                  </div>
+              </div>
+              &nbsp;&nbsp;
+              <div class="single_viz" id="map4">
+                  <div class="text">
+                    How many deaths per mention?
+                    <p>  </p>
+                  </div>
+                  <div class="chart" id="svg_map4"></div>
               </div>
 
-              <div class="single_viz" id="bubble">
+              <div class="side_by_side" id="bubble">
                   <div class="text">
-                      Highest Death Toll vs Highest Article Mentions
-                      <p> Comparing the countries with highest number of
-                        casualties vs. the country names that get paired
-                        with the word "terrorism" in articles </p>
-                      <button class="button" type="button" onclick="shuffle();">Shuffle the colors</button>
-                      <br>
-                      <div class="dropdown">
-                      <button class="dropbtn">all</button>
-                      <div class="dropdown-content">
-                          <a onclick="filter('sports');">sports</a>
-                          <a onclick="filter('arts');">arts</a>
-                          <a onclick="filter('food');">food</a>
-                          <a onclick="filter('all');">all</a>
-                        </div>
-                      </div>
+                      Countries with highest casualties due to terrorism
+                      <p> Death count from terrorism (1999-2016) </p>
                   </div>
                   <svg class="chart" id="svg_bubble"></svg>
+              </div>
+              <div class="side_by_side" id="bubble2">
+                  <div class="text">
+                      Countries that get the most coverage on terrorism
+                      <p> Ratio of ("country name", "terrorism") to "terrorism" word count </p>
+                  </div>
+                  <svg class="chart" id="svg_bubble2"></svg>
               </div>
             <hr/>
 
@@ -74,6 +86,7 @@
         <script src="./map.js"></script>
         <script src="./map2.js"></script>
         <script src="./map3.js"></script>
+        <script src="./map4.js"></script>
         <script src="./bubble.js"></script>
         <script>
 

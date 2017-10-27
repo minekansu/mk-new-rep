@@ -1,7 +1,7 @@
 var ramp=d3.scale.linear().domain([0,10,20]).range(["lightblue","blue", "darkblue"]);
 
 var basic_choropleth = new Datamap({
-  element: document.getElementById("svg_map"),
+  element: document.getElementById("svg_map4"),
     scope: 'world',
     // Zoom in on Africa
     // setProjection: function(element) {
@@ -14,7 +14,7 @@ var basic_choropleth = new Datamap({
         //  .projection(projection);
       // return {path: path, projection: projection};
     // },
-  element: document.getElementById("svg_map"),
+  element: document.getElementById("svg_map4"),
   projection: 'mercator',
   fills: {
     defaultFill: "#CCCCCC",
@@ -481,14 +481,15 @@ var basic_choropleth = new Datamap({
     popupTemplate: function(geo, data) {
         return ['<div class="hoverinfo"><strong>',
                 'Country: ' + geo.properties.name,
-                '<br> % of articles talking about terrorism: ' + data.percentage + '%',
+                '<br> Paired article ratio: ' + data.percentage + '%',
                 '</strong></div>'].join('');
     }
   }
 });
 //Append a linearGradient element to the defs and give it a unique id
 //Append a defs (for definition) element to your SVG
-var svg = d3.select("#svg_map").append("svg").attr("id", "map1_legend").attr("width", 370).attr("height", 40);
+/*
+var svg = d3.select("#svg_map4").append("svg").attr("id", "map4_legend").attr("width", 370).attr("height", 40);
 var defs = svg.append("defs");
 
 //Append a linearGradient element to the defs and give it a unique id
