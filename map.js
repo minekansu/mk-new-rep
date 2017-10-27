@@ -488,7 +488,7 @@ var basic_choropleth = new Datamap({
 });
 //Append a linearGradient element to the defs and give it a unique id
 //Append a defs (for definition) element to your SVG
-var svg = d3.select("#svg_map").append("svg").attr("id", "map1_legend").attr("width", 370).attr("height", 40);
+var svg = d3.select("#svg_map").append("svg").attr("id", "map1_legend").attr("width", 370).attr("height", 45);
 var defs = svg.append("defs");
 
 //Append a linearGradient element to the defs and give it a unique id
@@ -502,7 +502,7 @@ linearGradient.append("stop")
 //Set the color for the end (100%)
 linearGradient.append("stop")
     .attr("offset", "100%")
-    .attr("stop-color", "#0000db"); //dark blue
+    .attr("stop-color", "#0000fb"); //dark blue
 //Draw the rectangle and fill with gradient
 svg.append("rect")
       .attr("width", 300)

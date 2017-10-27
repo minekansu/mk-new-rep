@@ -36,19 +36,22 @@
 }
 
 #map{
-    height: 400px;
+    height: 450px;
 }
 #map2{
-    height: 400px;
+    height: 450px;
 }
 #map3{
-    height: 400px;
+    height: 450px;
+}
+#map4{
+    height: 450px;
 }
 #bubble{
-    height: 350px;
+    height: 250px;
 }
 #bubble2{
-    height: 350px;
+    height: 250px;
 }
 .text{
     position: relative;

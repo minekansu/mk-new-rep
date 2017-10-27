@@ -1,7 +1,7 @@
 //bubble chart
 var diameter = 300;
 var format = d3.format(",d");
-var colors = ['#2AA4A9', '#57B28D','#FBAE4B', '#F16045', '#D12258', '#5E4E73', '#C2B49B', '#734743', '#80A464', '#435773'];
+var colors = ['#FFD700', '#57B28D','#FBAE4B', '#F16045', '#D12258', '#5E4E73', '#C2B49B', '#734743', '#80A464', '#435773'];
 var color = d3.scale.category10().range(colors);
 var bubble = d3.layout.pack()
     .sort(null)
@@ -61,14 +61,19 @@ node.append("text")
     .style("pointer-events", "none")
     .style("font-size", function(d){ return 18/60*d.r + "px"}) //adjust font-size based on node radius
     .text(function(d) { return d.name; });
-
-var legend = d3.select("#bubble").append("svg").attr("id", "legend");
-legend.append("rect").attr("id", "legend1")
-    .attr("x", "380").attr("y", "10").attr("width", "20").attr("height", "20").attr("fill", color("Asia"));
-legend.append("text").attr("x", "405").attr("y", "24").attr("font-size", "12px").text("Asia");
-legend.append("rect").attr("id", "legend2")
-    .attr("x", "510").attr("y", "10").attr("width", "20").attr("height", "20").attr("fill", color("Africa"));
-legend.append("text").attr("x", "535").attr("y", "24").attr("font-size", "12px").text("Africa");
+    var legend = d3.select("#bubble").append("svg").attr("id", "legend");
+    legend.append("rect").attr("id", "legend1")
+        .attr("x", "30").attr("y", "10").attr("width", "20").attr("height", "20").attr("fill", color("Asia"));
+    legend.append("text").attr("x", "60").attr("y", "24").attr("font-size", "12px").text("Asia");
+    legend.append("rect").attr("id", "legend2")
+        .attr("x", "110").attr("y", "10").attr("width", "20").attr("height", "20").attr("fill", color("Africa"));
+    legend.append("text").attr("x", "140").attr("y", "24").attr("font-size", "12px").text("Africa");
+    legend.append("rect").attr("id", "legend4")
+        .attr("x", "190").attr("y", "10").attr("width", "20").attr("height", "20").attr("fill", color("North America"));
+    legend.append("text").attr("x", "220").attr("y", "24").attr("font-size", "12px").text("North America");
+    legend.append("rect").attr("id", "legend3")
+        .attr("x", "330").attr("y", "10").attr("width", "20").attr("height", "20").attr("fill", color("Europe"));
+    legend.append("text").attr("x", "360").attr("y", "24").attr("font-size", "12px").text("Europe");
 
 function filter(category){
     d3.select(".dropbtn").text(category);
@@ -95,7 +100,7 @@ function filter(category){
 //second bubble chart
 var diameter = 300;
 var format = d3.format(",d");
-var colors = ['#2AA4A9', '#57B28D','#FBAE4B', '#F16045', '#D12258', '#5E4E73', '#C2B49B', '#734743', '#80A464', '#435773'];
+var colors = ['#FFD700', '#57B28D','#FBAE4B', '#F16045', '#D12258', '#5E4E73', '#C2B49B', '#734743', '#80A464', '#435773'];
 var color = d3.scale.category10().range(colors);
 var bubble2 = d3.layout.pack()
     .sort(null)
@@ -156,7 +161,7 @@ node.append("text")
     .style("pointer-events", "none")
     .style("font-size", function(d){ return 18/60*d.r + "px"}) //adjust font-size based on node radius
     .text(function(d) { return d.name; });
-
+/*
 var legend = d3.select("#bubble2").append("svg").attr("id", "legend");
 legend.append("rect").attr("id", "legend1")
     .attr("x", "380").attr("y", "10").attr("width", "20").attr("height", "20").attr("fill", color("Asia"));
@@ -170,7 +175,7 @@ legend.append("text").attr("x", "665").attr("y", "24").attr("font-size", "12px")
 legend.append("rect").attr("id", "legend4")
     .attr("x", "800").attr("y", "10").attr("width", "20").attr("height", "20").attr("fill", color("Europe"));
 legend.append("text").attr("x", "825").attr("y", "24").attr("font-size", "12px").text("Europe");
-
+*/
 function filter(category){
     d3.select(".dropbtn").text(category);
     switch(category){

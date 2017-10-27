@@ -254,7 +254,7 @@ var basic_choropleth = new Datamap({
     GRC: { fillKey:	"GRC", percentage:	"76"},
     GTM: { fillKey:	"GTM", percentage:	"21"},
     GUY: { fillKey:	"GUY", percentage:	"33"},
-    HKG: { fillKey:	"HKG", percentage:	"0"},
+    HKG: { fillKey:	"HKG", percentage:	"-"},
     HND: { fillKey:	"HND", percentage:	"39"},
     HRV: { fillKey:	"HRV", percentage:	"3"},
     HTI: { fillKey:	"HTI", percentage:	"30"},
@@ -380,8 +380,33 @@ var basic_choropleth = new Datamap({
     }
   }
 });
+
 var legend = d3.select("#svg_map3").append("svg").attr("id", "legend");
-//legend.append("rect").attr("x", "200").attr("y", "10").attr("width", "20").attr("height", "20").attr("fill", "#ABDDA4");
-//legend.append("text").attr("x", "225").attr("y", "24").attr("font-size", "12px").text("");
-//legend.append("rect").attr("x", "350").attr("y", "10").attr("width", "20").attr("height", "20").attr("fill", "#AB55A4");
-//legend.append("text").attr("x", "375").attr("y", "24").attr("font-size", "12px").text("Studied in");
+//Append a linearGradient element to the defs and give it a unique id
+//Append a defs (for definition) element to your SVG
+
+//var svg = d3.select("#svg_map3").append("svg").attr("id", "map1_legend").attr("width", 370).attr("height", 45);
+var defs = svg.append("defs");
+
+//Append a linearGradient element to the defs and give it a unique id
+var linearGradient = defs.append("linearGradient")
+    .attr("id", "linear-gradient");
+    //Set the color for the start (0%)
+linearGradient.append("stop")
+    .attr("offset", "0%")
+    .attr("stop-color", "#f0fff0"); //light blue
+
+//Set the color for the end (100%)
+linearGradient.append("stop")
+    .attr("offset", "100%")
+    .attr("stop-color", "#00008b"); //dark blue
+//Draw the rectangle and fill with gradient
+svg.append("rect")
+      .attr("width", 300)
+      .attr("height", 13)
+      .style("fill", "url(#linear-gradient)");
+      //var x = d3.scale.linear().range([0, 70000]).domain([1, 30]);
+
+			//var xAxis = d3.svg.axis().scale(x).orient("bottom");
+
+			//svg.append("g").attr("class", "x axis").attr("transform", "translate(0,20)").call(xAxis).append("text").attr("y", 15).attr("dy", ".71em").style("text-anchor", "end").text("axis title");
