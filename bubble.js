@@ -72,8 +72,8 @@ node.append("text")
         .attr("x", "190").attr("y", "10").attr("width", "20").attr("height", "20").attr("fill", color("North America"));
     legend.append("text").attr("x", "220").attr("y", "24").attr("font-size", "12px").text("North America");
     legend.append("rect").attr("id", "legend3")
-        .attr("x", "330").attr("y", "10").attr("width", "20").attr("height", "20").attr("fill", color("Europe"));
-    legend.append("text").attr("x", "360").attr("y", "24").attr("font-size", "12px").text("Europe");
+        .attr("x", "315").attr("y", "10").attr("width", "20").attr("height", "20").attr("fill", color("Europe"));
+    legend.append("text").attr("x", "345").attr("y", "24").attr("font-size", "12px").text("Europe");
 
 function filter(category){
     d3.select(".dropbtn").text(category);
